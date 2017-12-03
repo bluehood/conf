@@ -15,6 +15,7 @@ exec i3-msg 'workspace number 8 net; exec firefox; workspace number 1 src;'
 exec --no-startup-id Telegram
 exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
 exec --no-startup-id twmnd
+exec --no-startup-id udiskie --smart-tray --notify --automount
 
 # custom bindings
 bindsym $mod+c exec firefox
