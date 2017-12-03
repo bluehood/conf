@@ -181,6 +181,8 @@ for_window [ title="Figure " ] floating enable
 for_window [ class="ROOT" ] floating enable
 # make gnome-screenshot floating
 for_window [ title="Screenshot$" ] floating enable
+# make gpg-key git prompt floating
+for_window [ class="Pinentry" ] floating enable
 # assign messengers to workspace 9
 assign [class="Mattermost"] workspace "9 im"
 assign [class="Skype"] workspace "9 im"
