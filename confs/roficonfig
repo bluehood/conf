@@ -1,0 +1,3 @@
+!~/.config/rofi/config
+rofi.ssh-client:                     ssh
+rofi.ssh-command:                    {terminal} -e "{ssh-client} {host}"
