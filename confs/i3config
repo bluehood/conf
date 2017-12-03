@@ -12,7 +12,6 @@ exec --no-startup-id change_wallpaper
 exec --no-startup-id nm-applet
 exec i3-msg 'workspace 2; workspace number 1 src; exec i3-sensible-terminal'
 exec i3-msg 'workspace number 8 net; exec firefox; workspace number 1 src;'
-assign [class="Telegram"] workspace "9 im"
 exec --no-startup-id Telegram
 exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
 exec --no-startup-id twmnd
@@ -181,3 +180,7 @@ for_window [ title="Figure " ] floating enable
 for_window [ class="ROOT" ] floating enable
 # make gnome-screenshot floating
 for_window [ title="Screenshot$" ] floating enable
+# assign messengers to workspace 9
+assign [class="Mattermost"] workspace "9 im"
+assign [class="Skype"] workspace "9 im"
+assign [class="Telegram"] workspace "9 im"
