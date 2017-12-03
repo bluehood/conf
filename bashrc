@@ -1,0 +1,73 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+shopt -u cmdhist
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=10000
+HISTFILESIZE=10000
+HISTCONTROL=ignoreboth:ignoredups:ignorespace
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+alias ls='ls -v --color=auto'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+
+# some more ls aliases
+alias ll='ls -l -v '
+alias la='ls -A -v'
+alias l='ls -CF -v'
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# bash completion
+. /usr/share/bash-completion/bash_completion
+bind Space:magic-space
+
+# google benchmark
+google-bench() {
+   echo -I/home/blue/Tools/google_bench/include \
+        -L/home/blue/Tools/google_bench/src -lbenchmark
+}
+
+export PS1=''
+# git prompt
+source ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export PROMPT_COMMAND='__git_ps1 "\h:\[\e[34m\]\W\[\e[1;32m\]\[\e[0m\]" "\[\e[34m\]\$\[\e[0m\] "'
+# autojump (also modifies prompt command)
+[[ -s /home/blue/.autojump/etc/profile.d/autojump.sh ]] && source /home/blue/.autojump/etc/profile.d/autojump.sh
+
+# fix CURL certificates path
+export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+# colorise man pages
+man() {
+        env \
+        LESS_TERMCAP_md=$'\e[1;36m' \
+        LESS_TERMCAP_me=$'\e[0m' \
+        LESS_TERMCAP_se=$'\e[0m' \
+        LESS_TERMCAP_so=$'\e[1;40;92m' \
+        LESS_TERMCAP_ue=$'\e[0m' \
+        LESS_TERMCAP_us=$'\e[1;32m' \
+        man "$@"
+}
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# to setup atlas software from cvmfs
+export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
