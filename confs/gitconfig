@@ -1,0 +1,23 @@
+[user]
+	name = Enrico Guiraud
+	email = enrico.guiraud@cern.ch
+	signingkey = 48B5E832338DB918
+[core]
+	editor = vim
+[alias]
+    l = log --color --abbrev-commit --graph --decorate --relative-date
+    lao = log --color --abbrev-commit --graph --decorate --relative-date --all --oneline
+    lo = log --color --abbrev-commit --graph --decorate --relative-date --oneline
+    s = status
+    sfast = status -uno
+    d = diff
+    c = commit --verbose
+    a = add
+[color]
+	ui = auto
+[help]
+	autocorrect = 1
+[push]
+	default = simple
+[commit]
+	gpgsign = true
