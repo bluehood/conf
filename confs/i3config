@@ -10,8 +10,11 @@ set $mod Mod4
 # at startup
 exec --no-startup-id change_wallpaper
 exec --no-startup-id nm-applet
-exec i3-msg 'workspace 1 src; exec i3-sensible-terminal'
-exec i3-msg 'workspace 8 net; exec firefox; workspace 9 im; exec --no-startup-id bash -c "Telegram &; sleep 0.1"; workspace 1;'
+exec i3-msg 'workspace 2; workspace number 1 src; exec i3-sensible-terminal'
+exec i3-msg 'workspace number 8 net; exec firefox; workspace number 1 src;'
+assign [class="Telegram"] workspace "9 im"
+exec --no-startup-id Telegram
+exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
 exec --no-startup-id twmnd
 
 # custom bindings
