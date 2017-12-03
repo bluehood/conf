@@ -1,0 +1,7 @@
+#!/bin/bash
+# change background to a random picture in ~/Pictures/wallpapers using feh
+
+export DISPLAY=":0"
+files=(~/Pictures/wallpapers/*)
+WALLPAPER=$(printf "%s\n" "${files[RANDOM % ${#files[@]}]}")
+feh --bg-fill "$WALLPAPER"

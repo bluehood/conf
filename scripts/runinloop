@@ -1,0 +1,15 @@
+#!/bin/bash
+# run a command in a loop until it returns a non-zero status
+# -q discards the command's standard input
+QUIET=""
+if [[ "$1" == "-q" ]]; then
+   QUIET=" > /dev/null"
+   shift
+fi
+
+LOG=$(mktemp)
+echo 1 > $LOG
+CMD="N=\$(cat $LOG); echo execution \$N; $@ $QUIET && echo  > $LOG \$((N+1))"
+echo "running..."
+watch -n"0.1" --errexit --no-title $CMD
+echo "done"

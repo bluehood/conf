@@ -1,0 +1,6 @@
+#!/bin/bash
+# lock screen using i3lock and a random wallpaper among ~/Pictures/lock_wallpapers/*.png
+
+files=(~/Pictures/lock_wallpapers/*.png)
+PIC=$(printf "%s\n" "${files[RANDOM % ${#files[@]}]}")
+i3lock -i"$PIC"

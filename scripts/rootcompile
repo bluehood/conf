@@ -1,0 +1,9 @@
+#!/bin/bash
+# compile c++ source file against ROOT. requires `root-config` to be in PATH
+
+FILE="$1"
+OUT="${1%.*}"
+shift
+COMMAND=("g++ -g -O2 -Wall -Wextra -Wpedantic -o \"$OUT\" \"$FILE\"" '$(root-config --cflags --libs)' "$@")
+echo "$COMMAND"
+eval ${COMMAND[@]}

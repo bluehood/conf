@@ -1,0 +1,35 @@
+#!/bin/bash
+# compile .cpp/.cxx/.C source file and produce a flamegraph
+# requires perf, stackcollapse-perf.pl, flamegraph.pl to be in PATH
+
+if (( $# < 1)); then
+   echo "Usage: $0 <source.cpp>"
+   exit 1
+fi
+
+SNAME="$1"
+PNAME=$(basename ${SNAME})
+PNAME="${PNAME%.cpp}"
+PNAME="${PNAME%.cxx}"
+PNAME="${PNAME%.C}"
+SVGNAME="flamegraph_${PNAME}.svg"
+PNAME="${PNAME}.x"
+CXX=${CXX:-"$(which g++) -Wall -fno-omit-frame-pointer -g -O2"} 
+
+$CXX -o "$PNAME" "$SNAME" $CXXFLAGS && \
+{
+   START=$(date +%s)
+   perf record --call-graph dwarf "./$PNAME"
+   FINISH=$(date +%s)
+   DURATION=$(convertsecs.sh $((FINISH - START)))
+   perf script | stackcollapse-perf.pl > perf_collapsed.txt && \
+   {
+      flamegraph.pl perf_collapsed.txt --title="$PNAME ($DURATION)" \
+      --fontsize=16 --minwidth=1 --height=20 --width=1800 \
+      > "flamegraph_${PNAME%.x}.svg"
+   } && \
+   firefox "flamegraph_${PNAME%.x}.svg"
+}
+
+# clean-up
+rm -rf perf_collapsed.txt 2> /dev/null
