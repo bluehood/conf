@@ -32,4 +32,4 @@ SET fish_pager_color_completion:\x1d
 SET fish_pager_color_description:B3A06D\x1eyellow
 SET fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SET fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SET fish_user_abbreviations:g\x20git\x1eal\x20alsamixer\x1esl\x20ls\x1ecd\x2e\x2e\x20cd\x20\x2e\x2e\x1emaek\x20make\x1ecmaek\x20cmake
+SET fish_user_abbreviations:g\x20git\x1eal\x20alsamixer\x1esl\x20ls\x1ecd\x2e\x2e\x20cd\x20\x2e\x2e\x1emaek\x20make\x1ecmaek\x20cmake\x1eplayme\x20mplayer\x20\x20\x2dshuffle\x20Music/playme/\x2a
