@@ -24,8 +24,6 @@ fi
 # custom PATHs
 # miniconda
 export PATH="/home/blue/miniconda2/bin:$PATH"
-# telegram desktop client
-export PATH="/home/blue/Tools/Telegram:$PATH"
 # custom commands (that cannot be aliases)
 export PATH="/home/blue/bin:$PATH"
 # FlameGraph
