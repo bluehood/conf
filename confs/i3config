@@ -12,7 +12,7 @@ set $mod Mod4
 # set workspace names
 set $w0 workspace "number 10"
 set $wshell workspace "1 sh"
-set $wedit workspace "3 edit"
+set $wedit workspace "2 edit"
 set $w3 workspace "3"
 set $w4 workspace "4"
 set $w5 workspace "5"
