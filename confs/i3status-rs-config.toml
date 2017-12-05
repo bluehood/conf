@@ -6,7 +6,7 @@ block = "net"
 device = "wlp58s0"
 interval = 5
 ssid = true
-ip = true
+ip = false
 speed_up = false
 speed_down = false
 

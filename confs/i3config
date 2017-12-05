@@ -110,8 +110,8 @@ bindsym $mod+2 $wedit
 bindsym $mod+3 $w3
 bindsym $mod+4 $w4
 bindsym $mod+5 $w5
-bindsym $mod+6 $w5
-bindsym $mod+7 $w5
+bindsym $mod+6 $w6
+bindsym $mod+7 $w7
 bindsym $mod+8 $wnet
 bindsym $mod+9 $wim
 bindsym $mod+0 $w0
