@@ -2,6 +2,11 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
+block = "music"
+player = "vlc"
+buttons = ["play", "next"]
+
+[[block]]
 block = "net"
 device = "wlp58s0"
 interval = 5
