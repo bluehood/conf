@@ -2,6 +2,7 @@
 " setup Vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set shell=/bin/bash           " for Vundle, when using fish
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -54,3 +55,4 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
 let g:ycm_filetype_whitelist = { 'cpp': 1 }
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
