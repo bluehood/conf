@@ -1,6 +1,22 @@
 "~/.vimrc
+" setup Vundle
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" general settings
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin on " To ignore plugin indent changes - required
+
+" non-vundle settings
 syntax on
 set expandtab
 set tabstop=2
@@ -27,3 +43,14 @@ nnoremap <leader>l :ls<CR>:b<Space>
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>f :bn<CR>
 nnoremap <Leader>g :e#<CR>
+
+"YouCompleteMe options
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_conf.py'
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_add_preview_to_completeopt = 0
+set completeopt-=preview
+let g:ycm_filetype_whitelist = { 'cpp': 1 }
