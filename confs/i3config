@@ -202,3 +202,6 @@ for_window [ class="Pinentry" ] floating enable
 assign [class="Mattermost"] $wim
 assign [class="Skype"] $wim
 assign [class="Telegram"] $wim
+
+# move custom music player to scratchpad automatically
+for_window [ class="playmeplayer" ] move scratchpad
