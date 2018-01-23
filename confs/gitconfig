@@ -13,6 +13,7 @@
     d = diff
     c = commit --verbose
     a = add
+	compare = log --oneline --graph --cherry-pick --left-right
 [color]
 	ui = auto
 [help]
