@@ -21,11 +21,15 @@ set $w7 workspace "7"
 set $wnet workspace "8 net"
 set $wim workspace "9 im"
 
+# useful variables
+set $browser firefox
+set $terminal gnome-terminal
+
 # at startup
 exec --no-startup-id change_wallpaper
 exec --no-startup-id nm-applet
-exec i3-msg "$wnet; exec firefox;"
-exec i3-msg "$wshell; exec gnome-terminal;"
+exec i3-msg "$wnet; exec $browser;"
+exec i3-msg "$wshell; exec $terminal;"
 exec --no-startup-id telegram-desktop
 exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
 exec --no-startup-id twmnd
@@ -33,8 +37,8 @@ exec --no-startup-id udiskie --smart-tray --notify --automount
 exec --no-startup-id gnome-keyring
 
 # custom bindings
-bindsym $mod+c exec firefox
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+c exec $browser
+bindsym $mod+Return exec $terminal
 bindsym Print exec gnome-screenshot -i
 bindsym $mod+l exec lock_screen
 bindsym $mod+g exec start_animated_wp
