@@ -1,7 +1,6 @@
 [user]
 	name = Enrico Guiraud
 	email = enrico.guiraud@cern.ch
-	signingkey = 48B5E832338DB918
 [core]
 	editor = vim
 [alias]
@@ -23,3 +22,5 @@
 	default = simple
 [color "diff"]
 	whitespace = red reverse
+[commit]
+   gpgSign = true
