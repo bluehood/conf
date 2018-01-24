@@ -22,3 +22,5 @@
 	default = simple
 [commit]
 	gpgsign = true
+[color "diff"]
+	whitespace = red reverse
