@@ -22,8 +22,6 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # custom PATHs
-# miniconda
-export PATH="/home/blue/miniconda2/bin:$PATH"
 # custom commands (that cannot be aliases)
 export PATH="/home/blue/bin:$PATH"
 # FlameGraph
@@ -34,5 +32,3 @@ export PATH="/home/blue/Tools/yEd/bin:$PATH"
 export PATH="/home/blue/Tools/mattermost-desktop-3.6.0:$PATH"
 # dfmt -- Dlang code formatter
 export PATH="/home/blue/.dub/packages/dfmt-master/dfmt:$PATH"
-# firefox quantum
-export PATH="/home/blue/Tools/firefox:$PATH"

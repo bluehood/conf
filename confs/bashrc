@@ -41,12 +41,12 @@ google-bench() {
         -L/home/blue/Tools/google_bench/src -lbenchmark
 }
 
-export PS1=''
-# git prompt
-source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWCOLORHINTS=1
-export PROMPT_COMMAND='__git_ps1 "\h:\[\e[34m\]\W\[\e[1;32m\]\[\e[0m\]" "\[\e[34m\]\$\[\e[0m\] "'
+#export PS1=''
+## git prompt
+#source ~/.git-prompt.sh
+#export GIT_PS1_SHOWDIRTYSTATE=1
+#export GIT_PS1_SHOWCOLORHINTS=1
+#export PROMPT_COMMAND='__git_ps1 "\h:\[\e[34m\]\W\[\e[1;32m\]\[\e[0m\]" "\[\e[34m\]\$\[\e[0m\] "'
 # autojump (also modifies prompt command)
 [[ -s /home/blue/.autojump/etc/profile.d/autojump.sh ]] && source /home/blue/.autojump/etc/profile.d/autojump.sh
 
@@ -71,3 +71,5 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # to setup atlas software from cvmfs
 export ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
 alias setupATLAS='source $ATLAS_LOCAL_ROOT_BASE/user/atlasLocalSetup.sh'
+. /home/blue/miniconda2/etc/profile.d/conda.sh
+conda activate py3
