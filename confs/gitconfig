@@ -8,6 +8,7 @@
     l = log --color --abbrev-commit --graph --decorate --relative-date
     lao = log --color --abbrev-commit --graph --decorate --relative-date --all --oneline
     lo = log --color --abbrev-commit --graph --decorate --relative-date --oneline
+    la = log --color --abbrev-commit --graph --decorate --relative-date --all
     s = status
     sfast = status -uno
     d = diff
