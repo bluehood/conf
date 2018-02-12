@@ -3,4 +3,4 @@
 
 files=(~/Pictures/lock_wallpapers/*.png)
 PIC=$(printf "%s\n" "${files[RANDOM % ${#files[@]}]}")
-i3lock -i"$PIC"
+i3lock -i"$PIC" -t
