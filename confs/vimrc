@@ -22,7 +22,7 @@ filetype plugin on " To ignore plugin indent changes - required
 " non-vundle settings
 syntax on
 set expandtab
-set tabstop=2
+set tabstop=3
 set wildmenu
 set wildmode=longest:list,full
 set wildignorecase
