@@ -10,16 +10,17 @@ hide_edge_borders both
 set $mod Mod4
 
 # set workspace names
-set $w0 workspace "number 10"
-set $wshell workspace "1 sh"
-set $wedit workspace "2 edit"
-set $w3 workspace "3"
-set $w4 workspace "4"
-set $w5 workspace "5"
-set $w6 workspace "6"
-set $w7 workspace "7"
-set $wnet workspace "8 net"
-set $wim workspace "9 im"
+set $w0 workspace number "10"
+set $wshell workspace number "1 sh"
+set $wedit workspace number "2 edit"
+set $w3 workspace number "3"
+set $w4 workspace number "4"
+set $w5 workspace number "5"
+set $w6 workspace number "6"
+set $w7 workspace number "7"
+set $wnet workspace number "8 net"
+set $wim workspace number "9 im"
+set $wim_nonumber workspace "9 im"
 
 # useful variables
 set $browser firefox
@@ -203,9 +204,9 @@ for_window [ title="Screenshot$" ] floating enable
 # make gpg-key git prompt floating
 for_window [ class="Pinentry" ] floating enable
 # assign messengers to correct workspace
-assign [class="Mattermost"] $wim
-assign [class="Skype"] $wim
-assign [class="Telegram"] $wim
+assign [class="Mattermost"] $wim_nonumber
+assign [class="Skype"] $wim_nonumber
+assign [class="Telegram"] $wim_nonumber
 
 # move custom music player to scratchpad automatically
 for_window [ class="playmeplayer" ] move scratchpad
