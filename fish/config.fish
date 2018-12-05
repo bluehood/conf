@@ -27,3 +27,7 @@ begin
         source $AUTOJUMP_PATH
     end
 end
+
+# conda
+source /home/blue/miniconda3/etc/fish/conf.d/conda.fish
+conda activate
