@@ -33,7 +33,6 @@ set nowrap
 let mapleader = ","
 set colorcolumn=120
 set incsearch
-set hlsearch
 
 " clang-format binding
 map <C-K> :py3f ~/Tools/clang-format.py<cr>
