@@ -30,3 +30,6 @@ end
 
 # conda
 source /home/eguiraud/Tools/miniconda3/etc/fish/conf.d/conda.fish
+
+# Fix gpg signing of git commits
+export GPG_TTY=(tty)
