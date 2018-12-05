@@ -33,3 +33,6 @@ end
 # conda activate tvae
 
 complete -c wiki -f -a "(pushd ~/Nextcloud/notes && fd --extension md && popd)"
+
+# Fix gpg signing of git commits with pinentry-tty
+export GPG_TTY=(tty)
