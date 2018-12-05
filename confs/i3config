@@ -197,7 +197,7 @@ bar {
 }
 
 # make python plots floating
-for_window [ title="Figure " ] floating enable
+for_window [ class="matplotlib" ] floating enable
 # make root plots floating
 for_window [ class="ROOT" ] floating enable
 # make gnome-screenshot floating
