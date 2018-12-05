@@ -33,9 +33,10 @@ exec i3-msg "$wnet; exec $browser;"
 exec i3-msg "$wshell; exec $terminal;"
 exec --no-startup-id telegram-desktop
 exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
-exec --no-startup-id twmnd
 exec --no-startup-id udiskie --smart-tray --notify --automount
 exec --no-startup-id gnome-keyring
+# for redshift
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 
 # custom bindings
 bindsym $mod+c exec $browser
