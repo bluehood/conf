@@ -1,7 +1,6 @@
-# Defined in - @ line 2
 function sourceroot
 	set nargs (count $argv)
-    if math "$nargs > 1" >/dev/null
+    if [ $nargs -gt 1 ]
         echo "too many arguments" >&2
         return 1
     end
