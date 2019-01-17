@@ -12,3 +12,12 @@ rofi.color-active: #222222, #b1b4b3, #222222, #007763, #b1b4b3
 
 !                  'background', 'border', 'separator'
 rofi.color-window:  #222222,      #222222,  #b1b4b3
+
+rofi.font: Monospace 16
+rofi.lines: 2
+rofi.columns: 3
+rofi.separator-style: solid
+rofi.line-margin: 2
+rofi.line-padding: 1
+rofi.bw: 1
+rofi.hide-scrollbar: true

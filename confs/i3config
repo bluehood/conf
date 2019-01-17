@@ -67,12 +67,8 @@ floating_modifier $mod
 bindsym $mod+Shift+Q kill
 
 # start rofi (window switcher, program launcher) -- color setup is in ~/.Xresources
-bindsym $mod+grave exec rofi -show run -sidebar-mode \
- -font "mono 16" -width 60 -lines 2 -columns 3 -separator-style solid \
- -line-margin 2 -line-padding 1 -bw 1 -hide-scrollbar
-bindsym $mod+q exec rofi -show window -sidebar-mode \
- -font "mono 16" -width 60 -lines 2 -columns 3 -separator-style solid \
- -line-margin 2 -line-padding 1 -bw 1 -hide-scrollbar
+bindsym $mod+grave exec rofi -show run -sidebar-mode
+bindsym $mod+q exec rofi -show window -sidebar-mode
 
 # change focus
 bindsym $mod+Left focus left
