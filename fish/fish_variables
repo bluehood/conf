@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:vim
+SETUVAR __fish_classic_git_prompt_initialized:\x1d
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
@@ -25,7 +26,6 @@ SETUVAR _fish_abbr_t:clear\x20\x26\x26\x20task
 SETUVAR _fish_abbr_v:vim
 SETUVAR _fish_abbr_yay:conda\x20deactivate\x20\x26\x26\x20yay
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
-SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:\x2d\x2dbold
 SETUVAR fish_color_comment:red
 SETUVAR fish_color_cwd:green
@@ -54,4 +54,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_abbreviations:g\x20git\x1esm\x20snakemake
-SETUVAR --export fish_user_paths:/home/eguiraud/Tools/miniconda3/envs/tvem/bin\x3a/home/eguiraud/Tools/miniconda3/condabin\x3a/home/eguiraud/\x2eautojump/bin\x3a/home/eguiraud/Tools/taskwarrior/bin\x3a/home/eguiraud/Tools/gdb\x2d8\x2e1\x2dcolorpatch/bin\x3a/home/eguiraud/bin\x3a/home/eguiraud/Tools/FlameGraph\x3a/home/eguiraud/Tools/firefox\x3a/usr/local/bin\x3a/usr/bin\x3a/bin\x3a/usr/local/games\x3a/usr/games
+SETUVAR --export fish_user_paths:/home/eguiraud/Tools/taskwarrior/bin\x1e/home/eguiraud/Tools/gdb\x2d8\x2e1\x2dcolorpatch/bin\x1e/home/eguiraud/bin\x1e/home/eguiraud/Tools/FlameGraph\x1e/home/eguiraud/Tools/firefox
