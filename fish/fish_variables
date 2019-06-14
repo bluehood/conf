@@ -4,9 +4,15 @@ SETUVAR --export EDITOR:vim
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR _fish_abbr_cp:cp\x20\x2di
 SETUVAR _fish_abbr_g:git
+SETUVAR _fish_abbr_gdb:gbd\x20\x2dq
 SETUVAR _fish_abbr_lr:ls\x20\x2dtr
+SETUVAR _fish_abbr_mv:mv\x20\x2di
+SETUVAR _fish_abbr_p:ipython
+SETUVAR _fish_abbr_root:root\x20\x2dl
 SETUVAR _fish_abbr_sm:snakemake
+SETUVAR _fish_abbr_su:su\x20\x2d
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:\x2d\x2dbold
