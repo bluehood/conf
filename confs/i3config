@@ -22,32 +22,20 @@ set $w8 workspace number "8"
 set $w9 workspace number "9"
 
 # useful variables
-set $browser chromium
-#set $terminal gnome-terminal -- bash -c 'stty -ixon -ixoff && export VIM_SERVERNAME=$RANDOM && vim --servername $VIM_SERVERNAME -c "term ++curwin"'
+set $browser /home/eguiraud/Tools/firefox/firefox
 set $terminal gnome-terminal
 
 # at startup
-exec --no-startup-id change_wallpaper
-exec --no-startup-id nm-applet
 exec i3-msg "$w8; exec $browser;"
 exec i3-msg $w1; exec $terminal;
-exec --no-startup-id telegram-desktop
-exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
-exec --no-startup-id udiskie --smart-tray --notify --automount
-exec --no-startup-id gnome-keyring
-# for redshift
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id nextcloud
-
-# to get another screen on top of the laptop screen
-exec --no-startup-id xrandr --output DP1 --above eDP1
 
 # custom bindings
 bindsym $mod+c exec $browser
 bindsym $mod+Shift+c exec $browser https://bluehood.dev/tiddlyme
 bindsym $mod+Return exec $terminal
 bindsym Print exec gnome-screenshot -i
-bindsym $mod+bracketleft exec lock_screen
+bindsym $mod+bracketleft exec i3lock -i"/home/eguiraud/.wallpaper.png" -t
 bindsym $mod+t sticky toggle
 # rename current workspace
 bindsym $mod+n exec exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
@@ -63,7 +51,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVu Sans Mono, Awesome 15
+font pango:DejaVu Sans Mono, Awesome 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -173,8 +161,8 @@ bindsym $mod+r mode "resize"
 # i3-bar (requires the AUR installation of i3status-rs
 bar {
         #font pango:Terminus 18px
-        font pango:DejaVu Sans Mono, Icons 14
-        status_command /usr/bin/i3status-rs ~/Scratchpad/conf_repo/confs/i3status-rs-config.toml
+        font pango:DejaVu Sans Mono, Icons 12
+        status_command i3status
         colors {
             separator #666666
             background #222222
@@ -214,7 +202,7 @@ workspace 8 output eDP1
 workspace 9 output eDP1
 workspace 10 output eDP1
 
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
 
-gaps inner 10
-smart_gaps on
+#gaps inner 10
+#smart_gaps on
