@@ -54,4 +54,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_abbreviations:g\x20git\x1esm\x20snakemake
-SETUVAR --export fish_user_paths:/home/blue/Tools/cura\x3a/home/blue/Tools/FlameGraph\x3a/home/blue/bin
+SETUVAR --export fish_user_paths:/home/eguiraud/Tools/miniconda3/envs/tvem/bin\x3a/home/eguiraud/Tools/miniconda3/condabin\x3a/home/eguiraud/\x2eautojump/bin\x3a/home/eguiraud/Tools/taskwarrior/bin\x3a/home/eguiraud/Tools/gdb\x2d8\x2e1\x2dcolorpatch/bin\x3a/home/eguiraud/bin\x3a/home/eguiraud/Tools/FlameGraph\x3a/home/eguiraud/Tools/firefox\x3a/usr/local/bin\x3a/usr/bin\x3a/bin\x3a/usr/local/games\x3a/usr/games
