@@ -30,4 +30,4 @@ end
 
 # conda
 source /home/blue/miniconda3/etc/fish/conf.d/conda.fish
-conda activate
+conda activate tvem
