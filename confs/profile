@@ -20,15 +20,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-# custom PATHs
-# custom commands (that cannot be aliases)
-export PATH="/home/blue/bin:$PATH"
-# FlameGraph
-export PATH="/home/blue/Tools/FlameGraph:$PATH"
-# yEd
-export PATH="/home/blue/Tools/yEd/bin:$PATH"
-# mattermost
-export PATH="/home/blue/Tools/mattermost-desktop-3.6.0:$PATH"
-# dfmt -- Dlang code formatter
-export PATH="/home/blue/.dub/packages/dfmt-master/dfmt:$PATH"
