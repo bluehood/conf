@@ -31,6 +31,7 @@ exec --no-startup-id change_wallpaper
 exec --no-startup-id nm-applet
 exec i3-msg "$wnet; exec $browser;"
 exec i3-msg "$wshell; exec $terminal;"
+exec i3-msg "exec nextcloud;"
 exec --no-startup-id telegram-desktop
 exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
 exec --no-startup-id udiskie --smart-tray --notify --automount
