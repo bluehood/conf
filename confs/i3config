@@ -31,13 +31,16 @@ exec --no-startup-id change_wallpaper
 exec --no-startup-id nm-applet
 exec i3-msg "$wnet; exec $browser;"
 exec i3-msg "$wshell; exec $terminal;"
-exec i3-msg "exec nextcloud;"
 exec --no-startup-id telegram-desktop
 exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
 exec --no-startup-id udiskie --smart-tray --notify --automount
 exec --no-startup-id gnome-keyring
 # for redshift
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+exec --no-startup-id nextcloud
+
+# to get another screen on top of the laptop screen
+# exec --no-startup-id xrandr --output DP1 --above eDP1
 
 # custom bindings
 bindsym $mod+c exec $browser
@@ -45,6 +48,7 @@ bindsym $mod+Return exec $terminal
 bindsym Print exec gnome-screenshot -i
 bindsym $mod+l exec lock_screen
 bindsym $mod+g exec start_animated_wp
+bindsym $mod+t sticky toggle
 # rename current workspace
 bindsym $mod+n exec exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
