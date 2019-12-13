@@ -30,4 +30,6 @@ end
 
 # conda
 source /home/blue/miniconda3/etc/fish/conf.d/conda.fish
-conda activate tvem
+conda activate tvae
+
+set -gx PYTHONPATH "$PYTHONPATH:/home/blue/phd/quick_scripts"
