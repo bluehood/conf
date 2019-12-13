@@ -14,6 +14,7 @@ SETUVAR _fish_abbr_rm:rm\x20\x2di
 SETUVAR _fish_abbr_root:root\x20\x2dl
 SETUVAR _fish_abbr_sm:snakemake
 SETUVAR _fish_abbr_su:su\x20\x2d
+SETUVAR _fish_abbr_t:clear\x20\x26\x26\x20task
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:\x2d\x2dbold
