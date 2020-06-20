@@ -5,9 +5,9 @@
 	editor = vim
 [alias]
     l = log --color --abbrev-commit --graph --decorate --relative-date
-    lao = log --color --abbrev-commit --graph --decorate --all --oneline
-    lo = log --color --abbrev-commit --graph --decorate --oneline
-    la = log --color --abbrev-commit --graph --decorate --relative-date --all
+    lo = l --oneline
+    la = l --all
+    lao = la --oneline
     s = status
     sfast = status -uno
     d = diff
@@ -15,7 +15,7 @@
     a = add
     p = pull -p
     f = fetch -p
-	 compare = log --oneline --graph --cherry-pick --left-right
+    compare = log --oneline --graph --cherry-pick --left-right
 [color]
 	ui = auto
 [help]
@@ -33,3 +33,5 @@
 	required = true
 [credential]
 	helper = cache
+[pull]
+	ff = only
