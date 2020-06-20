@@ -214,7 +214,7 @@ assign [class="Skype"] $wim_nonumber
 assign [class="Telegram"] $wim_nonumber
 
 # move custom music player to scratchpad automatically
-for_window [ window_role="playmeplayer" ] move scratchpad
+for_window [ window_role="musicplayer" ] move scratchpad
 
 workspace 1 output DP1 eDP1
 workspace 2 output DP1 eDP1
