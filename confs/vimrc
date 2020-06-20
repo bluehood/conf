@@ -1,32 +1,11 @@
 "~/.vimrc
-" setup Vundle
 set nocompatible              " be iMproved, required
-filetype off                  " required
-set shell=/bin/bash           " for Vundle, when using fish
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-" YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
-" NerdCommenter
-Plugin 'scrooloose/nerdcommenter'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin on " To ignore plugin indent changes - required
-
-" non-vundle settings
 syntax on
 set expandtab
 set tabstop=3
 set wildmenu
 set wildmode=longest:list,full
 set wildignorecase
-set ignorecase
 set smartcase
 set secure
 set nowrap
@@ -45,30 +24,11 @@ set timeout timeoutlen=3000 ttimeoutlen=100
 set hidden
 "fly between buffers
 nnoremap <leader>l :ls<CR>:b<Space>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>g :e#<CR>
-
-"YouCompleteMe options
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_conf.py'
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_enable_diagnostic_highlighting = 0
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_add_preview_to_completeopt = 0
-set completeopt-=preview
-let g:ycm_filetype_whitelist = { 'cpp': 1 }
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
-
-"NerdCommenter options
-let g:NERDDefaultAlign = 'left'
 
 "Syntax highlighting for Snakefiles
 au BufNewFile,BufRead Snakefile set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
 
-" autopep8
-autocmd FileType python noremap <buffer> <C-K> :call Autopep8()<CR>
-let g:autopep8_disable_show_diff=1
-let g:autopep8_max_line_length=120
+" LateX mode
+set wrap
+nnoremap <leader>m :w<CR>:!make<CR>
