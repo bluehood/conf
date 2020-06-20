@@ -24,7 +24,7 @@ set $wim_nonumber workspace "9 im"
 
 # useful variables
 set $browser firefox
-set $terminal gnome-terminal
+set $terminal termite
 
 # at startup
 exec --no-startup-id change_wallpaper
