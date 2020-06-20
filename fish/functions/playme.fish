@@ -1,4 +1,4 @@
-# Defined in - @ line 2
+# Defined in /tmp/fish.se6fhv/playme.fish @ line 2
 function playme
-	xterm -class "playmeplayer" -e "cvlc -I rc --control dbus --random ~/Music/playme/*"
+	gnome-terminal --role="playmeplayer" -- cvlc -I rc --control dbus --random ~/Music/playme/*
 end
