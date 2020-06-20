@@ -71,9 +71,8 @@ floating_modifier $mod
 # kill focused window
 bindsym $mod+Shift+Q kill
 
-# start rofi (window switcher, program launcher) -- color setup is in ~/.Xresources
-bindsym $mod+grave exec rofi -show run -sidebar-mode
-bindsym $mod+q exec rofi -show window -sidebar-mode
+# start rofi (window switcher, program launcher) -- configuration is in ~/.config/rofi
+bindsym $mod+grave exec rofi -sidebar-mode -show run
 
 # change focus
 bindsym $mod+Left focus left

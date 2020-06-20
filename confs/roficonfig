@@ -21,3 +21,7 @@ rofi.line-margin: 2
 rofi.line-padding: 1
 rofi.bw: 1
 rofi.hide-scrollbar: true
+
+rofi.modi: window,run,ssh
+rofi.terminal: gnome-terminal
+rofi.parse-known-hosts: false
