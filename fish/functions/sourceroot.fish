@@ -1,4 +1,4 @@
-# Defined in - @ line 2
+# Defined in /tmp/fish.ieBQZP/sourceroot.fish @ line 2
 function sourceroot
 	set nargs (count $argv)
     if [ $nargs -gt 1 ]
@@ -9,7 +9,7 @@ function sourceroot
     else
         set rootbld "build"
     end
-    set thisroot ~/ROOT/{$rootbld}/bin/thisroot.fish
+    set thisroot ~/Work/ROOT/{$rootbld}/bin/thisroot.fish
     echo "sourcing $thisroot"
     source {$thisroot}
 end
