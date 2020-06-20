@@ -1,4 +1,4 @@
-# Defined in /tmp/fish.MLrEI0/ytplay.fish @ line 2
+# Defined in /tmp/fish.1XKK3R/ytplay.fish @ line 2
 function ytplay
    test -z "$argv" && notify-send "ytplay: nothing to search" && exit 1
    # grep [y]tdl to exclude grep itself from the grepping
@@ -11,5 +11,5 @@ function ytplay
    set IDS $RET[(seq 2 2 $NRET)]
    set ID (string join '|' $TITLES | \
            rofi -dmenu -i -format 'd' -sep '|' -columns 1 -lines 10 -no-fixed-num-lines -p 'select track')
-   mpv --vid=no ytdl://{$IDS[$ID]}
+   gnome-terminal --title="YouTube player" --role="musicplayer" -- mpv --vid=no ytdl://{$IDS[$ID]}
 end
