@@ -1,11 +1,31 @@
-"~/.vimrc
+" --- Vundle config start ---
 set nocompatible              " be iMproved, required
-syntax on
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-bufferline'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+" --- Vundle config end ---
+
+syntax enable
 set expandtab
 set tabstop=3
 set wildmenu
 set wildmode=longest:list,full
 set wildignorecase
+set ignorecase
 set smartcase
 set secure
 set nowrap
@@ -24,6 +44,8 @@ set timeout timeoutlen=3000 ttimeoutlen=100
 set hidden
 "fly between buffers
 nnoremap <leader>l :ls<CR>:b<Space>
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
 
 "Syntax highlighting for Snakefiles
 au BufNewFile,BufRead Snakefile set syntax=snakemake
@@ -32,3 +54,25 @@ au BufNewFile,BufRead *.smk set syntax=snakemake
 " LateX mode
 set wrap
 nnoremap <leader>m :w<CR>:!make<CR>
+set hlsearch
+set noautoindent
+
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "base16_grayscale"
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.png,*.jpg,*.svg
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" Save with ctrl+S, like a noob
+map <C-S> :w<CR>
+
+" ---- For safekeeping ----
+" Better fuzzy search (i.e. built-in ctrlP)
+"nnoremap <leader>p :e **/*
+"nnoremap <leader>v :vsplit **/*
+"nnoremap <leader>s :split **/*
