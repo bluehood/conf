@@ -48,6 +48,7 @@ set hidden
 nnoremap <leader>l :ls<CR>:b<Space>
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>p :bp<CR>
+nnoremap <leader>d :bd<CR>
 
 "Syntax highlighting for Snakefiles
 au BufNewFile,BufRead Snakefile set syntax=snakemake
