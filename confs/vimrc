@@ -45,7 +45,7 @@ set timeout timeoutlen=3000 ttimeoutlen=100
 " let me switch away from modified buffers
 set hidden
 "fly between buffers
-nnoremap <leader>l :ls<CR>:b<Space>
+nnoremap <leader>l :CommandTBuffer<CR>
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>p :bp<CR>
 nnoremap <leader>d :bd<CR>
