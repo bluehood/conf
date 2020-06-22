@@ -60,7 +60,7 @@ set noautoindent
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "base16_grayscale"
+let g:airline_theme = "base16_bright"
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
