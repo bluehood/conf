@@ -1,14 +1,11 @@
-" --- Vundle config start ---
-set nocompatible              " be iMproved, required
-filetype off                  " required
+"--- Vundle config start ---
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
+"set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -16,9 +13,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-" --- Vundle config end ---
+call vundle#end()
+filetype plugin indent on
+"--- Vundle config end ---
 
 syntax enable
 set expandtab
@@ -28,12 +25,13 @@ set wildmode=longest:list,full
 set wildignorecase
 set ignorecase
 set smartcase
+set incsearch
+set hlsearch
 set secure
 set nowrap
-let mapleader = ","
 set colorcolumn=120
-set incsearch
 set autoindent
+let mapleader = ","
 
 " clang-format binding
 map <C-K> :py3f ~/Tools/clang-format.py<cr>
@@ -52,28 +50,24 @@ nnoremap <leader>p :bp<CR>
 au BufNewFile,BufRead Snakefile set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
 
-" LateX mode
-set wrap
-nnoremap <leader>m :w<CR>:!make<CR>
-set hlsearch
-set noautoindent
-
-" Airline
+"Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "base16_bright"
 
-" CtrlP
+"CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.png,*.jpg,*.svg
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-" Save with ctrl+S, like a noob
-map <C-S> :w<CR>
+"LateX mode
+set wrap
+nnoremap <leader>m :w<CR>:!make<CR>
+set noautoindent
 
 " ---- For safekeeping ----
-" Better fuzzy search (i.e. built-in ctrlP)
+""Better fuzzy search (i.e. built-in ctrlP)
 "nnoremap <leader>p :e **/*
 "nnoremap <leader>v :vsplit **/*
 "nnoremap <leader>s :split **/*
