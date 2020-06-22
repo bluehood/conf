@@ -31,6 +31,8 @@ set secure
 set nowrap
 set colorcolumn=120
 set autoindent
+set list
+set listchars=tab:!·,trail:·
 let mapleader = ","
 
 " clang-format binding
