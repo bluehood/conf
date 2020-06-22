@@ -7,8 +7,7 @@ SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
-SETUVAR _fish_abbr_b:cmake\x20\x2d\x2dbuild\x20\x2e\x20\x2d\x2d\x20\x2dj4
-SETUVAR _fish_abbr_cal:cal\x20\x2dm
+SETUVAR _fish_abbr_b:cmake\x20\x2d\x2dbuild\x20\x2e\x20\x2d\x2d\x20\x2dj8
 SETUVAR _fish_abbr_cp:cp\x20\x2di
 SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_ga:git\x20add
@@ -25,6 +24,7 @@ SETUVAR _fish_abbr_sm:snakemake
 SETUVAR _fish_abbr_su:su\x20\x2d
 SETUVAR _fish_abbr_t:clear\x20\x26\x26\x20task
 SETUVAR _fish_abbr_v:vim
+SETUVAR _fish_abbr_valgr:\x7e/Tools/valgrind\x2d3\x2e15\x2e0/bin/valgrind\x20\x2d\x2dsuppressions\x3d\x24ROOTSYS/etc/valgrind\x2droot\x2esupp
 SETUVAR _fish_abbr_yay:conda\x20deactivate\x20\x26\x26\x20yay
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_command:\x2d\x2dbold
