@@ -2,51 +2,51 @@
 font = Inconsolata Regular 16
 
 [colors]
-# Base16 Sandcastle
-# Author: George Essig (https://github.com/gessig)
+# Base16 Atelier Forest
+# Author: Bram de Haan (http://atelierbramdehaan.nl)
 
-foreground          = #a89984
-foreground_bold     = #a89984
-cursor              = #a89984
-cursor_foreground   = #282c34
-background          = #282c34
+foreground          = #a8a19f
+foreground_bold     = #a8a19f
+cursor              = #a8a19f
+cursor_foreground   = #1b1918
+background          = #1b1918
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #282c34
-color8  = #665c54
-color7  = #a89984
-color15 = #fdf4c1
+color0  = #1b1918
+color8  = #766e6b
+color7  = #a8a19f
+color15 = #f1efee
 
 # Red
-color1  = #83a598
-color9  = #83a598
+color1  = #f22c40
+color9  = #f22c40
 
 # Green
-color2  = #528b8b
-color10 = #528b8b
+color2  = #7b9726
+color10 = #7b9726
 
 # Yellow
-color3  = #a07e3b
-color11 = #a07e3b
+color3  = #c38418
+color11 = #c38418
 
 # Blue
-color4  = #83a598
-color12 = #83a598
+color4  = #407ee7
+color12 = #407ee7
 
 # Purple
-color5  = #d75f5f
-color13 = #d75f5f
+color5  = #6666ea
+color13 = #6666ea
 
 # Teal
-color6  = #83a598
-color14 = #83a598
+color6  = #3d97b8
+color14 = #3d97b8
 
 # Extra colors
-color16 = #a07e3b
-color17 = #a87322
-color18 = #2c323b
-color19 = #3e4451
-color20 = #928374
-color21 = #d5c4a1
+color16 = #df5320
+color17 = #c33ff3
+color18 = #2c2421
+color19 = #68615e
+color20 = #9c9491
+color21 = #e6e2e0
