@@ -33,6 +33,7 @@ set colorcolumn=120
 set autoindent
 set list
 set listchars=tab:!·,trail:·
+set autowrite
 let mapleader = ","
 
 " clang-format binding
@@ -65,7 +66,6 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "LateX mode
 set wrap
-nnoremap <leader>m :w<CR>:!make<CR>
 set noautoindent
 
 " ---- For safekeeping ----
