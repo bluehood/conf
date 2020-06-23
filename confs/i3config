@@ -24,7 +24,7 @@ set $wim_nonumber workspace "9 im"
 
 # useful variables
 set $browser firefox
-set $terminal termite
+set $terminal gnome-terminal -- bash -c 'stty -ixon -ixoff && export VIM_SERVERNAME=$RANDOM && vim --servername $VIM_SERVERNAME -c "term ++curwin"'
 
 # at startup
 exec --no-startup-id change_wallpaper
