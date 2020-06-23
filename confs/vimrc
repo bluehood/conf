@@ -34,6 +34,8 @@ set autoindent
 set list
 set listchars=tab:!·,trail:·
 set autowrite
+set termwinkey=<C-S>
+set termwinscroll=1000000
 let mapleader = ","
 
 " clang-format binding
