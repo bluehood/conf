@@ -4,18 +4,20 @@
 [core]
 	editor = vim
 [alias]
-    l = log --color --abbrev-commit --graph --decorate --relative-date
-    lo = l --oneline
-    la = l --all
-    lao = la --oneline
-    s = status
-    sfast = status -uno
-    d = diff
-    c = commit --verbose
-    a = add
-    p = pull -p
-    f = fetch -p
-    compare = log --oneline --graph --cherry-pick --left-right
+	l = log --color --abbrev-commit --graph --decorate --relative-date
+	lo = l --oneline
+	la = l --all
+	lao = la --oneline
+	s = status
+	sfast = status -uno
+	d = diff
+	c = commit --verbose
+	a = add
+	p = pull -p
+	f = fetch -p
+	compare = log --oneline --graph --cherry-pick --left-right
+	r = rebase
+	ri = r -i
 [color]
 	ui = auto
 [help]
