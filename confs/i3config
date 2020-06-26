@@ -216,5 +216,5 @@ workspace 10 output eDP1
 
 for_window [class=".*"] border pixel 0
 
-gaps inner 20
+gaps inner 10
 smart_gaps on
