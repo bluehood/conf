@@ -11,7 +11,7 @@ SETUVAR _fish_abbr_cp:cp\x20\x2di
 SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_ga:git\x20add
 SETUVAR _fish_abbr_gap:git\x20add\x20\x2dp
-SETUVAR _fish_abbr_gdb:gdb\x20\x2dq
+SETUVAR _fish_abbr_gdb:gdb\x20\x2dq\x20\x2d\x2dargs
 SETUVAR _fish_abbr_gg:git\x20grep
 SETUVAR _fish_abbr_lr:ls\x20\x2dtr
 SETUVAR _fish_abbr_mv:mv\x20\x2di
