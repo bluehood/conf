@@ -11,16 +11,15 @@ set $mod Mod4
 
 # set workspace names
 set $w0 workspace number "10"
-set $wshell workspace number "1 sh"
-set $wedit workspace number "2 edit"
+set $w1 workspace number "1"
+set $w2 workspace number "2"
 set $w3 workspace number "3"
 set $w4 workspace number "4"
 set $w5 workspace number "5"
 set $w6 workspace number "6"
 set $w7 workspace number "7"
-set $wnet workspace number "8 net"
-set $wim workspace number "9 im"
-set $wim_nonumber workspace "9 im"
+set $w8 workspace number "8"
+set $w9 workspace number "9"
 
 # useful variables
 set $browser firefox
@@ -29,8 +28,8 @@ set $terminal gnome-terminal -- bash -c 'stty -ixon -ixoff && export VIM_SERVERN
 # at startup
 exec --no-startup-id change_wallpaper
 exec --no-startup-id nm-applet
-exec i3-msg "$wnet; exec $browser;"
-exec i3-msg "$wshell; exec $terminal;"
+exec i3-msg "$w8; exec $browser;"
+exec i3-msg "$w1; exec $terminal;"
 exec --no-startup-id telegram-desktop
 exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
 exec --no-startup-id udiskie --smart-tray --notify --automount
@@ -111,15 +110,15 @@ bindsym $mod+a focus parent
 bindsym $mod+z focus child
 
 # switch to workspace
-bindsym $mod+1 $wshell
-bindsym $mod+2 $wedit
+bindsym $mod+1 $w1
+bindsym $mod+2 $w2
 bindsym $mod+3 $w3
 bindsym $mod+4 $w4
 bindsym $mod+5 $w5
 bindsym $mod+6 $w6
 bindsym $mod+7 $w7
-bindsym $mod+8 $wnet
-bindsym $mod+9 $wim
+bindsym $mod+8 $w8
+bindsym $mod+9 $w9
 bindsym $mod+0 $w0
 # switch to next/prev workspace number
 bindsym $mod+Mod1+H workspace prev
@@ -132,15 +131,15 @@ bindsym $mod+Shift+period move scratchpad
 bindsym $mod+period scratchpad show
 
 # move focused container to workspace number
-bindsym $mod+Shift+exclam move container to $wshell
-bindsym $mod+Shift+at move container to $wedit
+bindsym $mod+Shift+exclam move container to $w1
+bindsym $mod+Shift+at move container to $w2
 bindsym $mod+Shift+numbersign move container to $w3
 bindsym $mod+Shift+dollar move container to $w4
 bindsym $mod+Shift+percent move container to $w5
 bindsym $mod+Shift+asciicircum move container to $w6
 bindsym $mod+Shift+ampersand move container to $w7
-bindsym $mod+Shift+asterisk move container to $wnet
-bindsym $mod+Shift+parenleft move container to $wim
+bindsym $mod+Shift+asterisk move container to $w8
+bindsym $mod+Shift+parenleft move container to $w9
 bindsym $mod+Shift+parenright move container to $w0
 
 #move focused container to next/prev workspace
@@ -196,9 +195,9 @@ for_window [ title="Screenshot$" ] floating enable
 # make gpg-key git prompt floating
 for_window [ class="Pinentry" ] floating enable
 # assign messengers to correct workspace
-assign [class="Mattermost"] $wim_nonumber
-assign [class="Skype"] $wim_nonumber
-assign [class="Telegram"] $wim_nonumber
+assign [class="Mattermost"] $w9
+assign [class="Skype"] $w9
+assign [class="Telegram"] $w9
 
 # move custom music player to scratchpad automatically
 for_window [ window_role="musicplayer" ] move scratchpad
