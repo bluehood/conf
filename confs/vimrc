@@ -63,6 +63,9 @@ let g:airline_theme = "base16_bright"
 set wrap
 set noautoindent
 
+"C++ has overloads, ask instead of jumping to random tags
+noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
+
 " ---- For safekeeping ----
 ""Better fuzzy search (i.e. built-in ctrlP)
 "nnoremap <leader>p :e **/*
