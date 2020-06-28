@@ -37,3 +37,5 @@
 	helper = cache
 [pull]
 	ff = only
+[init]
+	templatedir = ~/.git_template
