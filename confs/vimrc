@@ -66,6 +66,14 @@ set noautoindent
 "C++ has overloads, ask instead of jumping to random tags
 noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
 
+"Fix `gx` -- workaround for https://github.com/vim/vim/issues/4738
+let g:netrw_nogx = 1
+nnoremap gx yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>
+
+"Paste from vim buffer with C-V in vim terminal
+"<C-Shift-V> still pastes from clipboard
+tnoremap <C-V> <C-S>"0
+
 " ---- For safekeeping ----
 ""Better fuzzy search (i.e. built-in ctrlP)
 "nnoremap <leader>p :e **/*
