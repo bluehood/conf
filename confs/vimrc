@@ -74,6 +74,12 @@ nnoremap gx yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>
 "<C-Shift-V> still pastes from clipboard
 tnoremap <C-V> <C-S>"0
 
+"Search
+"From `man grep`: the empty file /dev/null causes file names to be output even if only one file matches
+set grepprg=rg\ -n\ $*\ /dev/null
+command! -nargs=+ -complete=file Grep execute 'silent grep! <args>' | copen
+nnoremap <C-F> :Grep 
+
 " ---- For safekeeping ----
 ""Better fuzzy search (i.e. built-in ctrlP)
 "nnoremap <leader>p :e **/*
