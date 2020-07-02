@@ -29,7 +29,7 @@ set $terminal gnome-terminal -- bash -c 'stty -ixon -ixoff && export VIM_SERVERN
 exec --no-startup-id change_wallpaper
 exec --no-startup-id nm-applet
 exec i3-msg "$w8; exec $browser;"
-exec i3-msg "$w1; exec $terminal;"
+exec i3-msg $w1; exec $terminal;
 exec --no-startup-id telegram-desktop
 exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
 exec --no-startup-id udiskie --smart-tray --notify --automount
