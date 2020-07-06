@@ -66,6 +66,7 @@ let g:airline_theme = "base16_bright"
 "LateX mode
 set wrap
 set noautoindent
+nnoremap <leader>m :silent mak!<CR>:redr!<CR>
 
 "C++ has overloads, ask instead of jumping to random tags
 noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
