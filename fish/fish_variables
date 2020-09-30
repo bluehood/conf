@@ -22,6 +22,7 @@ SETUVAR _fish_abbr_root:root\x20\x2dl
 SETUVAR _fish_abbr_sm:snakemake
 SETUVAR _fish_abbr_su:su\x20\x2d
 SETUVAR _fish_abbr_t:clear\x20\x26\x26\x20task
+SETUVAR _fish_abbr_v:vim
 SETUVAR _fish_abbr_yay:conda\x20deactivate\x20\x26\x26\x20yay
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
