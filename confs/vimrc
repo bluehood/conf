@@ -68,8 +68,10 @@ set wrap
 set noautoindent
 nnoremap <leader>m :silent mak!<CR>:redr!<CR>
 
+"Fly between tags
 "C++ has overloads, ask instead of jumping to random tags
 noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
+nnoremap <C-J> :tjump 
 
 "Fix `gx` -- workaround for https://github.com/vim/vim/issues/4738
 let g:netrw_nogx = 1
