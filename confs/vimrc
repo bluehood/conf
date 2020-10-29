@@ -80,8 +80,9 @@ let g:netrw_browsex_viewer= "xdg-open"
 
 "Search
 set grepprg=rg\ -Tsvg\ -Tpdf\ -n\ $*
-command! -nargs=+ -complete=file Grep execute 'silent grep! <args>' | copen | redraw!
+command -nargs=+ -complete=file Grep execute 'silent grep! <args>' | copen | redraw!
 nnoremap <C-F> :Grep 
+nnoremap <C-S> :Grep <cword><CR>
 
 "CommandT options
 let g:CommandTFileScanner="git"
