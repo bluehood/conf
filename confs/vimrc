@@ -86,6 +86,7 @@ nnoremap <C-S> :Grep <cword><CR>
 
 "CommandT options
 let g:CommandTFileScanner="git"
+let g:CommandTWildIgnore=&wildignore . ",*.png,*.pdf"
 
 " ---- For safekeeping ----
 ""Better fuzzy search (i.e. built-in ctrlP)
