@@ -22,7 +22,7 @@ set $w8 workspace number "8"
 set $w9 workspace number "9"
 
 # useful variables
-set $browser firefox
+set $browser chromium
 #set $terminal gnome-terminal -- bash -c 'stty -ixon -ixoff && export VIM_SERVERNAME=$RANDOM && vim --servername $VIM_SERVERNAME -c "term ++curwin"'
 set $terminal gnome-terminal
 
