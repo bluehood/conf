@@ -88,8 +88,5 @@ nnoremap <C-S> :Grep <cword><CR>
 let g:CommandTFileScanner="git"
 let g:CommandTWildIgnore=&wildignore . ",*.png,*.pdf"
 
-" ---- For safekeeping ----
-""Better fuzzy search (i.e. built-in ctrlP)
-"nnoremap <leader>p :e **/*
-"nnoremap <leader>v :vsplit **/*
-"nnoremap <leader>s :split **/*
+"Use kj as <ESC>
+inoremap kj <ESC>
