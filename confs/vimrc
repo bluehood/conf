@@ -73,9 +73,10 @@ nnoremap <leader>m :silent mak!<CR>:redr!<CR>
 noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
 nnoremap <C-J> :tjump 
 
-"Fix `gx` -- workaround for https://github.com/vim/vim/issues/4738
-let g:netrw_nogx = 1
-nnoremap gx yiW:!xdg-open <cWORD><CR> <C-r>" & <CR><CR>
+"Use xdg-open for gx
+let g:netrw_browsex_viewer= "xdg-open"
+"Old workaround in case still needed
+"nnoremap gx :!xdg-open '<cfile>' & <CR><CR>
 
 "Search
 set grepprg=rg\ -Tsvg\ -Tpdf\ -n\ $*
