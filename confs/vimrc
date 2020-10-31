@@ -74,9 +74,9 @@ noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
 nnoremap <C-J> :tjump 
 
 "Use xdg-open for gx
-let g:netrw_browsex_viewer= "xdg-open"
-"Old workaround in case still needed
-"nnoremap gx :!xdg-open '<cfile>' & <CR><CR>
+nnoremap gx :!xdg-open '<cfile>' &>/dev/null & <CR><CR>
+"This should be enough, but causes weird problems
+"let g:netrw_browsex_viewer= "xdg-open"
 
 "Search
 set grepprg=rg\ -Tsvg\ -Tpdf\ -n\ $*
