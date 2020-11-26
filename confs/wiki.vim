@@ -5,7 +5,7 @@ set autochdir
 command GrepTag execute 'silent grep! "^\#"<cword>' | copen | redraw!
 
 "Add command to list all existing tags
-function ListWikiTags()
+function WikiTags()
    set splitright
    vnew
    vertical resize 40
@@ -17,7 +17,16 @@ function ListWikiTags()
    normal Gddgg
    nnoremap <buffer> <CR> :GrepTag<CR>
 endfunction
-nnoremap <C-T> :call ListWikiTags()<CR>
+nnoremap <C-T> :call WikiTags()<CR>
+
+"List backlinks
+function WikiBackLinks()
+   let f = @%
+   echo f
+   let f = "'" . f[:-4] . "]]'"
+   Grep 'f'
+endfunction
+nnoremap <C-B> :call WikiBackLinks()<CR>
 
 "Jump to internal link using CTRL-]
 nnoremap <C-]> t]vi]"zy:e <C-R>z.md<CR>
