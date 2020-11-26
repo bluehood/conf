@@ -1,6 +1,6 @@
-# Defined in /tmp/fish.Z1kJ8K/connect_bose.fish @ line 1
+# Defined in /tmp/fish.BOqtKq/connect_bose.fish @ line 2
 function connect_bose
    bluetoothctl power off
    bluetoothctl power on
-   bluetoothctl connect 04:52:C7:E5:2E:5F
+   bluetoothctl connect 60:AB:D2:3C:84:27
 end
