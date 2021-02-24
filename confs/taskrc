@@ -1,0 +1,53 @@
+# [Created by task 2.2.0 12/24/2016 15:12:52]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
+# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+dateformat=d/m/Y
+dateformat.annotation=d/m/Y
+dateformat.edit=d/m/Y H:N:S
+dateformat.holiday=YMD
+dateformat.info=d/m/Y H:N:S
+dateformat.report=d/m/Y
+report.list.columns=description.desc
+report.list.labels=desc
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=~/.task
+
+# Color theme (uncomment one to use)
+#include /usr/share/task/light-16.theme
+#include /usr/share/task/light-256.theme
+#include /usr/share/task/dark-16.theme
+#include /usr/share/task/dark-256.theme
+#include /usr/share/task/dark-red-256.theme
+#include /usr/share/task/dark-green-256.theme
+#include /usr/share/task/dark-blue-256.theme
+#include /usr/share/task/dark-violets-256.theme
+#include /usr/share/task/dark-yellow-green.theme
+#include /usr/share/task/dark-gray-256.theme
+
+#taskd.server=freecinc.com:53589
+#taskd.key=\/home\/blue\/.task\/freecinc_386fd63a.key.pem
+#taskd.certificate=\/home\/blue\/.task\/freecinc_386fd63a.cert.pem
+#taskd.ca=\/home\/blue\/.task\/freecinc_386fd63a.ca.pem
+#taskd.credentials=FreeCinc\/freecinc_386fd63a\/1757bc62-e72b-4765-a914-ebc9c06070f5
+
+taskd.certificate=\/home\/blue\/.task\/bluehood.dev.cert.pem
+taskd.key=\/home\/blue\/.task\/bluehood.dev.key.pem
+taskd.ca=\/home\/blue\/.task\/bluehood.dev.ca.cert.pem
+taskd.server=bluehood.dev:53589
+taskd.credentials=Public\/Enrico Guiraud\/7c779b28-f94a-4a07-8ade-7b1c58a73888
+#taskd.trust=ignore hostname
+search.case.sensitive=0
+report.all_projects.description=List all projects ever used
+report.all_projects.columns=project.indented
+report.all_projects.sort=project+
+context.work=pro.not:dnd and pro.not:household and pro.not:vps and pro.not:casa and pro.not:laptop and pro.not:
+context.nowork=pro.not:work and pro.not:phd
