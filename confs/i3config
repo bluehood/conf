@@ -174,7 +174,7 @@ bindsym $mod+r mode "resize"
 # i3-bar (requires the AUR installation of i3status-rs
 bar {
         #font pango:Terminus 18px
-        font pango:DejaVu Sans Mono, Icons 24
+        font pango:DejaVu Sans Mono, Icons 28
         status_command /usr/bin/i3status-rs
         colors {
             separator #666666
