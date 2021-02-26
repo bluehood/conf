@@ -38,5 +38,5 @@
 [pull]
 	ff = only
 [init]
-	templatedir = ~/.git_template
+	templatedir = ~/.config/git/templates
 	defaultBranch = main
