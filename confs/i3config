@@ -22,25 +22,25 @@ set $w8 workspace number "8"
 set $w9 workspace number "9"
 
 # useful variables
-set $browser chromium
+set $browser firefox
 #set $terminal gnome-terminal -- bash -c 'stty -ixon -ixoff && export VIM_SERVERNAME=$RANDOM && vim --servername $VIM_SERVERNAME -c "term ++curwin"'
-set $terminal gnome-terminal
+set $terminal alacritty
 
 # at startup
-exec --no-startup-id change_wallpaper
+#exec --no-startup-id change_wallpaper
 exec --no-startup-id nm-applet
 exec i3-msg "$w8; exec $browser;"
 exec i3-msg $w1; exec $terminal;
-exec --no-startup-id telegram-desktop
-exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
-exec --no-startup-id udiskie --smart-tray --notify --automount
-exec --no-startup-id gnome-keyring
-# for redshift
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id nextcloud
+#exec --no-startup-id telegram-desktop
+#exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
+#exec --no-startup-id udiskie --smart-tray --notify --automount
+#exec --no-startup-id gnome-keyring
+## for redshift
+#exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+#exec --no-startup-id nextcloud
 
 # to get another screen on top of the laptop screen
-exec --no-startup-id xrandr --output DP1 --above eDP1
+#exec --no-startup-id xrandr --output DP1 --above eDP1
 
 # custom bindings
 bindsym $mod+c exec $browser
@@ -58,12 +58,13 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Sreen brightness controls
+# FIXME
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVu Sans Mono, Awesome 15
+font pango:DejaVu Sans Mono, Awesome 24
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -173,8 +174,8 @@ bindsym $mod+r mode "resize"
 # i3-bar (requires the AUR installation of i3status-rs
 bar {
         #font pango:Terminus 18px
-        font pango:DejaVu Sans Mono, Icons 14
-        status_command /usr/bin/i3status-rs ~/Scratchpad/conf_repo/confs/i3status-rs-config.toml
+        font pango:DejaVu Sans Mono, Icons 24
+        status_command /usr/bin/i3status-rs
         colors {
             separator #666666
             background #222222
