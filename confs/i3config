@@ -185,7 +185,7 @@ bar {
             inactive_workspace #333333 #333333 #888888
             urgent_workspace #2f343a #900000 #ffffff
         }
-        tray_output eDP1
+        tray_output eDP-1
 }
 
 # make python plots floating
