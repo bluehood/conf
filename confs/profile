@@ -20,3 +20,7 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# from https://wiki.archlinux.org/index.php/HiDPI#Firefox
+# fix scaling of Firefox and other gdk apps
+export GDK_SCALE=2
