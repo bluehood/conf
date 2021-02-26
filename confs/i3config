@@ -64,7 +64,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVu Sans Mono, Awesome 24
+font pango:DejaVu Sans Mono, Awesome 26
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -174,7 +174,7 @@ bindsym $mod+r mode "resize"
 # i3-bar (requires the AUR installation of i3status-rs
 bar {
         #font pango:Terminus 18px
-        font pango:DejaVu Sans Mono, Icons 28
+        font pango:DejaVu Sans Mono, Icons 26
         status_command /usr/bin/i3status-rs
         colors {
             separator #666666
