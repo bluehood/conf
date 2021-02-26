@@ -13,17 +13,7 @@ on_click = "alacritty -e nmtui"
 [[block]]
 block = "disk_space"
 path = "/"
-alias = "/"
-info_type = "available"
-unit = "GB"
-interval = 20
-warning = 2.0
-alert = 1.0
-
-[[block]]
-block = "disk_space"
-path = "/home"
-alias = "~"
+alias = " "
 info_type = "available"
 unit = "GB"
 interval = 20
@@ -62,6 +52,7 @@ interval = 10
 block = "time"
 interval = 60
 format = "%a %d-%m %R"
+on_click = "firefox https://bluehood.dev/nextcloud/apps/calendar"
 
 [[block]]
 block = "sound"
