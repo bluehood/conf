@@ -33,7 +33,7 @@ exec i3-msg "$w8; exec $browser;"
 exec i3-msg $w1; exec $terminal;
 #exec --no-startup-id telegram-desktop
 #exec --no-startup-id ~/bin/remove_notification # remove Telegram urgency notification
-#exec --no-startup-id udiskie --smart-tray --notify --automount
+exec --no-startup-id udiskie --smart-tray --notify --automount
 #exec --no-startup-id gnome-keyring
 ## for redshift
 #exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
@@ -171,7 +171,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# i3-bar (requires the AUR installation of i3status-rs
+# i3 status bar (requires i3status-rust)
 bar {
         #font pango:Terminus 18px
         font pango:DejaVu Sans Mono, Icons 26
