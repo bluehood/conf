@@ -21,6 +21,6 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# from https://wiki.archlinux.org/index.php/HiDPI#Firefox
-# fix scaling of Firefox and other gdk apps
-export GDK_SCALE=2
+# from https://wiki.archlinux.org/index.php/HiDPI
+export GDK_SCALE=2 # Firefox and other gdk apps
+export QT_SCALE_FACTOR=2 # nextcloud and other qt apps
