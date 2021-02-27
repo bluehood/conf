@@ -680,7 +680,7 @@ font:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-#key_bindings:
+key_bindings:
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
@@ -735,7 +735,7 @@ font:
   #- { key: E,      mods: Shift,         mode: Vi|~Search, action: WordRightEnd            }
   #- { key: Key5,   mods: Shift,         mode: Vi|~Search, action: Bracket                 }
   #- { key: Slash,                       mode: Vi|~Search, action: SearchForward           }
-  #- { key: Slash,  mods: Shift,         mode: Vi|~Search, action: SearchBackward          }
+  - { key: 53,  mods: Shift,         mode: Vi|~Search, action: SearchBackward          }
   #- { key: N,                           mode: Vi|~Search, action: SearchNext              }
   #- { key: N,      mods: Shift,         mode: Vi|~Search, action: SearchPrevious          }
 
