@@ -1,6 +1,6 @@
-# Defined in /tmp/fish.F6OFUR/wiki.fish @ line 2
+# Defined in /tmp/fish.KMnQn2/wiki.fish @ line 2
 function wiki --wraps='vim -S ~/.vim/wiki.vim'
-  set -l notes_dir "/home/blue/Nextcloud/notes"
+  set -l notes_dir "/home/blue/Wiki_tmp"
 
   if test (count $argv) -eq 0
     vim -S ~/.vim/wiki.vim "+chdir $notes_dir"

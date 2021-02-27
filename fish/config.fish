@@ -32,7 +32,7 @@ end
 #source /home/blue/miniconda3/etc/fish/conf.d/conda.fish
 # conda activate tvae
 
-complete -c wiki -f -a "(pushd ~/Nextcloud/notes && fd --extension md && popd)"
+complete -c wiki -f -a "(pushd ~/Wiki_tmp && fd --extension md && popd)"
 
 # Fix gpg signing of git commits with pinentry-tty
 export GPG_TTY=(tty)
