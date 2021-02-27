@@ -37,7 +37,7 @@ exec i3-msg $w1; exec $terminal;
 #exec --no-startup-id gnome-keyring
 ## for redshift
 #exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-#exec --no-startup-id nextcloud
+exec --no-startup-id nextcloud
 
 # to get another screen on top of the laptop screen
 #exec --no-startup-id xrandr --output DP1 --above eDP1
