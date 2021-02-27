@@ -32,6 +32,4 @@ end
 #source /home/blue/miniconda3/etc/fish/conf.d/conda.fish
 # conda activate tvae
 
-set -gx PYTHONPATH "$PYTHONPATH:/home/blue/phd/quick_scripts"
-
 complete -c wiki -f -a "(pushd ~/Nextcloud/notes && fd --extension md && popd)"
