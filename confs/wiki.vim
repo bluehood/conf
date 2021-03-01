@@ -29,5 +29,4 @@ endfunction
 nnoremap <C-B> :call WikiBackLinks()<CR>
 
 "Jump to internal link using CTRL-]
-nnoremap <C-]> t]vi]"zy:e <C-R>z.md<CR>
-
+nnoremap <C-]> Bt]vi]"zy:e <C-R>z.md<CR>
