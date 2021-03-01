@@ -33,6 +33,7 @@ end
 # conda activate tvae
 
 complete -c wiki -f -a "(pushd ~/Wiki_tmp && fd --extension md && popd)"
+complete -c sourceroot -f -a "(pushd ~/ROOT && ls -1d *@* && popd)"
 
 # Fix gpg signing of git commits with pinentry-tty
 export GPG_TTY=(tty)
