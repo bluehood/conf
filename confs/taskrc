@@ -41,7 +41,7 @@ data.location=~/.task
 
 taskd.certificate=\/home\/blue\/.task\/bluehood.dev.cert.pem
 taskd.key=\/home\/blue\/.task\/bluehood.dev.key.pem
-taskd.ca=\/home\/blue\/.task\/bluehood.dev.ca.cert.pem
+taskd.ca=\/home\/blue\/.task\/ca.cert.pem
 taskd.server=bluehood.dev:53589
 taskd.credentials=Public\/Enrico Guiraud\/7c779b28-f94a-4a07-8ade-7b1c58a73888
 #taskd.trust=ignore hostname
