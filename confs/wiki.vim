@@ -8,7 +8,7 @@ command GrepTag execute 'silent grep! "^\#"<cword>' | copen | redraw!
 function WikiTags()
    set splitright
    vnew
-   vertical resize 40
+   "vertical resize 40
    setlocal buftype=nowrite
    setlocal bufhidden=delete
    setlocal noswapfile
