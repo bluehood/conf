@@ -1,7 +1,7 @@
 !~/.config/rofi/config
 rofi.ssh-client:                     ssh
-rofi.ssh-command:                    {terminal} -- fish -c '{ssh-client} {host}'
-rofi.run-shell-command:              {terminal} -- fish -c '{cmd}'
+rofi.ssh-command:                    {terminal} -e fish -c '{ssh-client} {host}'
+rofi.run-shell-command:              {terminal} -e fish -c '{cmd}'
 rofi.run-command:                    fish -c '{cmd}'
 rofi.run-list-command:               'fish -c functions'
 
@@ -23,5 +23,5 @@ rofi.bw: 1
 rofi.hide-scrollbar: true
 
 rofi.modi: window,run,ssh
-rofi.terminal: gnome-terminal
+rofi.terminal: alacritty
 rofi.parse-known-hosts: false
