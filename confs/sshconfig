@@ -1,0 +1,52 @@
+#~/.ssh/config
+
+Host *
+# send server a ping every once in a while, so connection does not time out
+ServerAliveInterval 15
+ServerAliveCountMax 3
+ControlMaster auto
+ControlPath ~/.ssh/master-%r@%h:%p
+AddKeysToAgent yes
+
+Host lcm
+   HostName lcm.mi.infn.it
+   User blue
+
+Host derek
+  HostName derek.w2kroot.uni-oldenburg.de
+  User ruft7045
+
+Host vps
+  HostName bluehood.dev
+  User root
+
+Host lxplus.cern.ch
+   ForwardX11 yes
+   User eguiraud
+
+Host cern762hop
+   HostName lxplus.cern.ch
+   User eguiraud
+   ForwardX11 yes
+   RequestTTY yes
+   RemoteCommand env TERM=xterm-256color ssh -t cern762 tmux attach
+
+Host cern762hopnew
+   HostName lxplus.cern.ch
+   User eguiraud
+   ForwardX11 yes
+   RequestTTY yes
+   RemoteCommand env TERM=xterm-256color ssh -t cern762 tmux new
+
+Host cern762
+   User eguiraud
+   ForwardX11 yes
+   RequestTTY yes
+   RemoteCommand tmux attach
+
+Host cern762new
+   HostName cern762
+   User eguiraud
+   ForwardX11 yes
+   RequestTTY yes
+   RemoteCommand tmux new
