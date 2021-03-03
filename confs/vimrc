@@ -39,7 +39,7 @@ set termwinscroll=1000000
 let mapleader = ","
 
 " clang-format binding
-map <C-K> :py3f ~/Tools/clang-format.py<cr>
+map <C-K> :py3f /usr/share/clang/clang-format.py<cr>
 
 "fix for slow response after Esc, O
 set timeout timeoutlen=3000 ttimeoutlen=100
