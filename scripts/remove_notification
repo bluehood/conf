@@ -1,6 +1,0 @@
-#!/bin/bash
-# remove notification (i.e. red workspace box in i3) at Telegram startup
-# this script is meant to be called from i3/config
-
-sleep 3
-wmctrl -r "Telegram" -b remove,demands_attention
