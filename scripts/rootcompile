@@ -1,9 +1,15 @@
 #!/bin/bash
 # compile c++ source file against ROOT. requires `root-config` to be in PATH
 
+ROOT_BIN=$(which root 2> /dev/null)
+if [[ -z "${ROOT_BIN}" ]]; then
+   echo '`root` is not in PATH'
+   exit 1
+fi
+
 FILE="$1"
 OUT="${1%.*}"
 shift
-COMMAND=("g++ -g -O2 -Wall -Wextra -Wpedantic -o \"$OUT\" \"$FILE\"" '$(root-config --cflags --libs)' "$@")
+COMMAND=("g++ -g -Wall -Wextra -Wpedantic -o \"$OUT\" \"$FILE\"" '$(root-config --cflags --libs)' "$@")
 echo "$COMMAND"
-eval ${COMMAND[@]}
+g++ -g -Wall -Wextra -Wpedantic -o "$OUT" "$FILE" $(root-config --cflags --libs) "$@"
