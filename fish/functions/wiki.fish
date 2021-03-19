@@ -1,9 +1,9 @@
-# Defined in /tmp/fish.KMnQn2/wiki.fish @ line 2
-function wiki --wraps='vim -S ~/.vim/wiki.vim'
-  set -l notes_dir "/home/blue/Wiki_tmp"
+# Defined in /tmp/fish.jQxouz/wiki.fish @ line 2
+function wiki --wraps='vim -S ~/.vim/wiki.vim' --wraps='nvim -S ~/.vim/wiki.vim'
+  set -l notes_dir "/home/blue/Nextcloud/notes"
 
   if test (count $argv) -eq 0
-    vim -S ~/.vim/wiki.vim "+chdir $notes_dir"
+    nvim -S ~/.vim/wiki.vim "+chdir $notes_dir"
     return
   end
 
@@ -11,5 +11,5 @@ function wiki --wraps='vim -S ~/.vim/wiki.vim'
   for arg in $argv;
     set files $files $notes_dir/$arg
   end
-  vim -S ~/.vim/wiki.vim $files
+  nvim -S ~/.vim/wiki.vim $files
 end
