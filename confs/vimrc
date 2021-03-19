@@ -21,6 +21,7 @@ filetype plugin on
 syntax enable
 set expandtab
 set tabstop=3
+set shiftwidth=3
 set wildmenu
 set wildmode=longest:list,full
 set wildignorecase
@@ -35,8 +36,10 @@ set autoindent
 set list
 set listchars=tab:!·,trail:·
 set autowrite
-set termwinkey=<C-S>
-set termwinscroll=1000000
+if !has('nvim')
+   set termwinkey=<C-S>
+   set termwinscroll=1000000
+endif
 let mapleader = ","
 
 " clang-format binding
