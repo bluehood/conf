@@ -34,5 +34,6 @@ if test -f /usr/share/autojump/autojump.fish
    source /usr/share/autojump/autojump.fish
 end
 
-complete -c wiki -f -a "(pushd ~/Wiki_tmp && fd --extension md && popd)"
+# autocompletion for my own commands
+complete -c wiki -f -a "(pushd ~/Nextcloud/notes && fd --extension md && popd)"
 complete -c sourceroot -f -a "(pushd ~/ROOT && ls -1d *@* && popd)"
