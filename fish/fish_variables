@@ -19,11 +19,11 @@ SETUVAR _fish_abbr_mv:mv\x20\x2di
 SETUVAR _fish_abbr_p:ipython
 SETUVAR _fish_abbr_rm:rm\x20\x2di
 SETUVAR _fish_abbr_root:root\x20\x2dl
-SETUVAR _fish_abbr_sm:snakemake
+SETUVAR _fish_abbr_s:env\x20TERM\x3dxterm\x2d256color\x20ssh
 SETUVAR _fish_abbr_su:su\x20\x2d
 SETUVAR _fish_abbr_t:clear\x20\x26\x26\x20task
-SETUVAR _fish_abbr_v:vim
-SETUVAR _fish_abbr_yay:conda\x20deactivate\x20\x26\x26\x20yay
+SETUVAR _fish_abbr_v:nvim
+SETUVAR _fish_abbr_valgr:valgrind\x20\x2d\x2dsuppressions\x3d\x24ROOTSYS/etc/valgrind\x2droot\x2esupp
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:\x2d\x2dbold
