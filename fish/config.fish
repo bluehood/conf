@@ -10,7 +10,7 @@ set __fish_git_prompt_char_stagedstate '^'
 set __fish_git_prompt_char_stashstate '@'
 set __fish_git_prompt_char_upstream_ahead '↑'
 set __fish_git_prompt_char_upstream_behind '↓'
- 
+
 function fish_prompt
         set last_status $status
         set_color $fish_color_cwd
@@ -20,20 +20,19 @@ function fish_prompt
        set_color normal
 end
 
-# add autojump
-begin
-    set --local AUTOJUMP_PATH $HOME/.autojump/share/autojump/autojump.fish
-    if test -e $AUTOJUMP_PATH
-        source $AUTOJUMP_PATH
-    end
+# Fix gpg signing of git commits with pinentry-tty
+export GPG_TTY=(tty)
+
+# add conda
+if test -f /home/blue/Tools/conda/bin/conda
+   eval /home/blue/Tools/conda/bin/conda "shell.fish" "hook" $argv | source
+   conda deactivate
 end
 
-# conda
-#source /home/blue/miniconda3/etc/fish/conf.d/conda.fish
-# conda activate tvae
+# add autojump
+if test -f /usr/share/autojump/autojump.fish
+   source /usr/share/autojump/autojump.fish
+end
 
 complete -c wiki -f -a "(pushd ~/Wiki_tmp && fd --extension md && popd)"
 complete -c sourceroot -f -a "(pushd ~/ROOT && ls -1d *@* && popd)"
-
-# Fix gpg signing of git commits with pinentry-tty
-export GPG_TTY=(tty)
