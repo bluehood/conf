@@ -1,5 +1,5 @@
 #!/bin/bash
-# compile c++ source file against ROOT. requires `root-config` to be in PATH
+# compile C++ source file against ROOT. requires `root-config` to be in PATH
 
 ROOT_BIN=$(which root 2> /dev/null)
 if [[ -z "${ROOT_BIN}" ]]; then
@@ -10,6 +10,6 @@ fi
 FILE="$1"
 OUT="${1%.*}"
 shift
-COMMAND=("g++ -g -Wall -Wextra -Wpedantic -o \"$OUT\" \"$FILE\"" '$(root-config --cflags --libs)' "$@")
+COMMAND="g++ -g -Wall -Wextra -Wpedantic -o \"$OUT\" \"$FILE\" "'$(root-config --cflags --libs) '"$@"
 echo "$COMMAND"
-g++ -g -Wall -Wextra -Wpedantic -o "$OUT" "$FILE" $(root-config --cflags --libs) "$@"
+eval $COMMAND
