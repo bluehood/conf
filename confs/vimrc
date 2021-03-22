@@ -40,6 +40,7 @@ if !has('nvim')
    set termwinkey=<C-S>
    set termwinscroll=1000000
 endif
+set clipboard+=unnamedplus
 let mapleader = ","
 
 " clang-format binding
