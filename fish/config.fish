@@ -23,6 +23,9 @@ end
 # Fix gpg signing of git commits with pinentry-tty
 export GPG_TTY=(tty)
 
+# For ssh-agent to work
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # add conda
 if test -f /home/blue/Tools/conda/bin/conda
    eval /home/blue/Tools/conda/bin/conda "shell.fish" "hook" $argv | source
