@@ -9,11 +9,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'wincent/command-t'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'dag/vim-fish'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin on
