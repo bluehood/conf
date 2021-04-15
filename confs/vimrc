@@ -1,4 +1,4 @@
-"--- Vundle config start ---
+""""" Vundle config
 set nocompatible
 filetype off
 
@@ -17,8 +17,14 @@ Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin on
-"--- Vundle config end ---
+"""""
 
+""""" Theme
+colorscheme nord
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "nord"
+
+""""" Settings
 syntax enable
 set expandtab
 set tabstop=3
@@ -37,75 +43,28 @@ set autoindent
 set list
 set listchars=tab:!·,trail:·
 set autowrite
+set hidden " let me switch away from modified buffers
+set clipboard+=unnamedplus " use system clipboard as default buffer
+let mapleader = ","
+
+""""" Various fixes for classic vim
 if !has('nvim')
    set termwinkey=<C-S>
    set termwinscroll=1000000
+   "fix for slow response after Esc, O
+   set timeout timeoutlen=3000 ttimeoutlen=100
+   "Use xdg-open for gx
+   nnoremap gx :!xdg-open '<cfile>' &>/dev/null & <CR><CR>
+   "This should be enough, but causes weird problems
+   "let g:netrw_browsex_viewer= "xdg-open"
 endif
-set clipboard+=unnamedplus
-let mapleader = ","
-colorscheme nord
 
-" clang-format binding
-map <C-K> :py3f /usr/share/clang/clang-format.py<cr>
-
-"fix for slow response after Esc, O
-set timeout timeoutlen=3000 ttimeoutlen=100
-
-" let me switch away from modified buffers
-set hidden
-
-"fly between buffers
-nnoremap <leader>n :bn<CR>
-nnoremap <leader>p :bp<CR>
-nnoremap <leader>d :bd<CR>
-nnoremap <leader>D :bd!<CR>
-
-nnoremap g0 :tabfirst<CR>
-
-"Syntax highlighting for Snakefiles
-au BufNewFile,BufRead Snakefile set syntax=snakemake
-au BufNewFile,BufRead *.smk set syntax=snakemake
-
-"Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme = "nord"
-
-"LateX mode
-set wrap
-set noautoindent
-nnoremap <leader>m :silent mak!<CR>:redr!<CR>
-
-"Fly between tags
-"C++ has overloads, ask instead of jumping to random tags
-noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
-nnoremap <C-J> :tjump 
-
-"Use xdg-open for gx
-nnoremap gx :!xdg-open '<cfile>' &>/dev/null & <CR><CR>
-"This should be enough, but causes weird problems
-"let g:netrw_browsex_viewer= "xdg-open"
-
-"Search
-set grepprg=rg\ -Tsvg\ -Tpdf\ -n\ $*
-command -nargs=+ -complete=file Grep execute 'silent grep! <args>' | copen | redraw!
-nnoremap <C-F> :Grep 
-nnoremap <C-S> :Grep <cword><CR>
-
-"CommandT options
-let g:CommandTFileScanner="git"
-let g:CommandTWildIgnore=&wildignore . ",*.png,*.pdf"
-
-"Use kj as <ESC>
-inoremap kj <ESC>
-
+"""""Autocompletion
 "Use TAB to complete when typing words, else inserts TABs as usual.
 "Uses dictionary and source files to find matching words to complete.
-
-"See help completion for source,
 "Note: usual completion is on <C-n> but more trouble to press all the time.
 "Never type the same word twice and maybe learn a new spellings!
 "Use the Linux dictionary when spelling is in doubt.
-"Window users can copy the file to their machine.
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
     return "\<C-N>"
@@ -114,3 +73,22 @@ function! Tab_Or_Complete()
   endif
 endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+
+""""" Custom bindings
+"clang-format
+map <C-K> :py3f /usr/share/clang/clang-format.py<cr>
+
+"Fly between buffers
+nnoremap <leader>n :bn<CR>
+nnoremap <leader>p :bp<CR>
+nnoremap <leader>d :bd<CR>
+nnoremap <leader>D :bd!<CR>
+
+"Fly between tags
+"C++ has overloads, ask instead of jumping to random tags
+noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
+nnoremap <C-J> :tjump 
+
+"Others
+nnoremap g0 :tabfirst<CR>
+inoremap kj <ESC>
