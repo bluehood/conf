@@ -13,6 +13,7 @@ Plugin 'wincent/command-t'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'dag/vim-fish'
+Plugin 'arcticicestudio/nord-vim'
 
 call vundle#end()
 filetype plugin on
@@ -42,6 +43,7 @@ if !has('nvim')
 endif
 set clipboard+=unnamedplus
 let mapleader = ","
+colorscheme nord
 
 " clang-format binding
 map <C-K> :py3f /usr/share/clang/clang-format.py<cr>
@@ -66,7 +68,7 @@ au BufNewFile,BufRead *.smk set syntax=snakemake
 
 "Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "base16_bright"
+let g:airline_theme = "nord"
 
 "LateX mode
 set wrap
