@@ -1,1 +1,1 @@
-Yet another repo of custom config files. Nothing to see here.
+Yet another repo of config files.
