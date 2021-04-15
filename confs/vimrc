@@ -86,9 +86,11 @@ nnoremap <leader>D :bd!<CR>
 
 "Fly between tags
 "C++ has overloads, ask instead of jumping to random tags
-noremap <C-]> :execute ":tjump " . expand("<cword>")<CR>
-nnoremap <C-J> :tjump 
+noremap <C-]> :execute ":Tags " . expand("<cword>")<CR>
+nnoremap <leader>j :Tags<CR>
 
 "Others
 nnoremap g0 :tabfirst<CR>
 inoremap kj <ESC>
+nnoremap <leader>t :Files<CR>
+nnoremap <leader>f :Rg 
