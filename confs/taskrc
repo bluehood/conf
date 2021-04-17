@@ -49,5 +49,5 @@ search.case.sensitive=0
 report.all_projects.description=List all projects ever used
 report.all_projects.columns=project.indented
 report.all_projects.sort=project+
-context.work=pro.not:dnd and pro.not:household and pro.not:vps and pro.not:casa and pro.not:laptop and pro.not:
-context.nowork=pro.not:work and pro.not:phd
+context.work=pro:work or pro:phd or pro:tvae
+context.nowork=pro.not:work and pro.not:phd and pro.not:tvae
